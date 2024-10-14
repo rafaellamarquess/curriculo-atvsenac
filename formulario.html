@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Currículo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formacao">Formação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Experiência | Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Formulário</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Formulário de Contato</h2>
+        <form id="contactForm">
+            <fieldset class="border p-4">
+                <legend class="w-auto">Informações Pessoais</legend>
+                <div class="form-group">
+                    <label for="firstName">Nome</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+            </fieldset>
+            <fieldset class="border p-4 mt-4">
+                <legend class="w-auto">Informações do Serviço</legend>
+                <div class="form-group">
+                    <label for="language">Língua Aplicada no Serviço</label>
+                    <select class="form-control" id="language" name="language" required>
+                        <option value="">Selecione...</option>
+                        <option value="English">Inglês</option>
+                        <option value="Spanish">Espanhol</option>
+                        <option value="French">Francês</option>
+                        <option value="Portuguese">Português (pt-br)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fileUpload">Upload de Protótipo (PDF, DOC, DOCX, JPEG, PNG)</label>
+                    <input type="file" class="form-control-file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                </div>
+                <div class="form-group">
+                    <label for="preferredLanguages">Linguagens Preferidas</label>
+                    <select multiple class="form-control" id="preferredLanguages" name="preferredLanguages[]" required>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="C#">C#</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Banco de Dados Recomendado</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="database" id="sql" value="SQL" required>
+                            <label class="form-check-label" for="sql">SQL</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="database" id="nosql" value="NoSQL">
+                            <label class="form-check-label" for="nosql">NoSQL</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="shift">Turno de Preferência para Reuniões</label>
+                    <select class="form-control" id="shift" name="shift" required>
+                        <option value="">Selecione...</option>
+                        <option value="morning">Manhã</option>
+                        <option value="afternoon">Tarde</option>
+                        <option value="evening">Noite</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="meetingTime">Horário Sugerido para Reuniões</label>
+                    <input type="time" class="form-control" id="meetingTime" name="meetingTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryDate">Previsão de Entrega</label>
+                    <input type="date" class="form-control" id="deliveryDate" name="deliveryDate" required>
+                </div>
+            </fieldset>
+            <div class="mt-4">
+                <button type="button" class="btn btn-secondary" onclick="document.getElementById('contactForm').reset();">Limpar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 Rafaella Marques. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>
